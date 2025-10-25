@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bank Site Protoype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 2rem; }
+    h1 { margin-bottom: 0.75rem; }
+    form { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem; }
+    input[type="text"] { padding: 0.6rem 0.7rem; min-width: 280px; }
+    button { padding: 0.6rem 0.9rem; cursor: pointer; }
+    .list { display: grid; gap: 0.5rem; margin-top: 1rem; }
+    .item { padding: 0.7rem 0.9rem; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; }
+    .meta { font-size: 0.8rem; color: #666; }
+    .sr { position: absolute; left: -9999px; }
+  </style>
+</head>
+<body>
+<script
+src="./chart.js">
+</script>
+  <h1>Bank Site Prototype</h1>
+
+  <form id="create-form" autocomplete="off">
+    <label class="sr" for="text">Enter text</label>
+    <input id="text" name="text" type="text" placeholder="Type something…" required />
+    <button type="submit">OK</button>
+  </form>
+
+  <div id="list" class="list" aria-live="polite" aria-relevant="additions"></div>
+<canvas id="myChart" style="width:100%;max-width:600px;max-height: 300px;"></canvas>
+  <script
+  src="./frontend.js">
+  </script>
+</body>
+</html>
